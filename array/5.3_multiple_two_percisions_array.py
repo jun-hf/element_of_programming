@@ -22,10 +22,5 @@ def multiple_array(nums1, nums2):
     # result = result[next(x for i, x in )]
 
 
-"""
-
-
-"""
-
 if __name__ == "__main__":
     print(multiple_array([0], [2, 3, 8]))
