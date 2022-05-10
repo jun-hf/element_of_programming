@@ -37,6 +37,7 @@ import unittest
 import functools
 import string
 
+
 def int_to_str(num):
     is_negative = False
 
@@ -53,10 +54,13 @@ def int_to_str(num):
 
     return ('-' if is_negative else '') + ''.join(reversed(s))
 
+
 def str_to_int(str):
     return (-1 if str[0] == "-" else 1) * functools.reduce(
-        lambda sum, c : sum * 10 + string.digits.index(c), str[str[0] in '-+':]
+        lambda sum, c: sum * 10 +
+        string.digits.index(c), str[str[0] in '-+':], 0
     )
+
 
 class TestInt_to_StrMethod(unittest.TestCase):
     def setUp(self):
