@@ -13,7 +13,7 @@ def reverseStr(arr):
         pass
 
     # call reverse() to reverse the whole array
-    # ['t', 'a', 'C', ' ', 'I', ' ', ' ', 'l', 'l', 'e', 'H']
+    # ['t', 'a', 'C', ' ', 'I', ' ', 'l', 'l', 'e', 'H']
     # [Cat ]
 
     # reverse individual words and use ' ' as a separator
@@ -37,10 +37,13 @@ def reverseString(arr):
         while finish < len(arr) and arr[finish] != " ":
             print(start, finish)
             finish += 1
-        if finish == len(arr):
+        if finish == len(arr): # break after finish == len, so you need to call the functions again
             break
 
         reverse(arr, start, finish -1)
+        print("'''''''")
+        print(start, finish)
+        print("'''''''")
         start = finish + 1
     print(start)
     reverse(arr, start, len(arr) -1 )
