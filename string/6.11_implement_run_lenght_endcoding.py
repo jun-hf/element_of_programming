@@ -27,7 +27,7 @@ def encode(st):
     result.append(str(count) + char)
     return ''.join(result)
 
-
+print(type([]))
 
 
 
