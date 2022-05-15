@@ -3,14 +3,16 @@ class ListNode:
         self.data = data
         self.next = next
     
-    def add_next_node(self, next):
-        self.next = next
+    def add_next_node(self, inter):
+        self.next = ListNode(inter)
     
     def get_next_node(self):
         return self.next
+    
 
 
-L1 = ListNode(9)
+L1 = ListNode(2)
+
 
 
 dummy_head = tail = ListNode()
