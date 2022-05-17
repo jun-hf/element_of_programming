@@ -17,7 +17,7 @@ class LinkedStack:
     # stack methods
     def __init__(self):
         """
-        Create an empty stack
+        Create a new empty stack
         """
         self._head = None
         self._size = 0
