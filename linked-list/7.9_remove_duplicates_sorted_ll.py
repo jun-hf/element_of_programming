@@ -41,11 +41,12 @@ while pointer:
 
 return
 
-"""
+2 - 2 - 3 - 5 - 7 - 11 - 11
 
 def remove_dup(l):
     dummy_head = LinkedNode(0, l)
     pointer = dummy_head.next
+    print(pointer)
     data = pointer.data
     new_list = dummy_head.next
 
@@ -57,10 +58,48 @@ def remove_dup(l):
     
     return dummy_head.next
 
+2 - 2 - 3 - 5 - 7 - 11 - 11
+
+
+def remove_dup(l):
+    dummy_head = LinkedNode(0, l)
+    pointer = dummy_head.next
+    data = pointer.data
+    new = dummy_head.next
+
+    while pointer:
+        if data != pointer.data:
+            new.next = pointer
+            data = pointer.data
+            new = new.next
+        pointer = pointer.next
+
+    return dummy_head.next
+
+2 - 2 - 3 - 5 - 7 - 11 - 11
+"""
+
+def remove_dup(l):
+    it = l
+    while it:
+        next_distinct = it.next
+        while next_distinct and next_distinct.data == it.data:
+            next_distinct = next_distinct.next
+
+        it.next = next_distinct
+        it = next_distinct
+    return l
+
+print_all(remove_dup(l2_1))
+        
+
+
+
 print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
 
-remove_dup(l2_1)
-print_all(l2_1)
+print_all(remove_dup(l2_1))
+
+
 
 
 
